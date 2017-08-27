@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <effect>
+      <ColorAdjust />
+   </effect>
+   <top>
+      <AnchorPane prefHeight="304.0" prefWidth="243.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane layoutY="1.0" onKeyTyped="#discountButtonPushed" />
+            <Label fx:id="enterPricelable1" layoutX="77.0" layoutY="24.0" text="Enter Price:" />
+            <TextField fx:id="enteredPrice" alignment="CENTER" layoutX="32.0" layoutY="52.0" prefHeight="27.0" prefWidth="160.0" />
+            <TextField fx:id="discountPrice" alignment="CENTER" layoutX="31.0" layoutY="138.0" onAction="#discountButtonPushed" prefHeight="27.0" prefWidth="163.0" />
+            <Label contentDisplay="CENTER" layoutX="95.0" layoutY="111.0" prefHeight="17.0" prefWidth="52.0" text="Result:" />
+            <ToolBar blendMode="EXCLUSION" layoutY="204.0" prefHeight="52.0" prefWidth="244.0" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="204.0">
+              <items>
+                  <Button fx:id="getDiscount" mnemonicParsing="false" onAction="#discountButtonPushed" prefHeight="27.0" prefWidth="80.0" text="1.Get 10%" />
+                <Button fx:id="Round" mnemonicParsing="false" onAction="#round" text="2.Round" />
+                  <Button fx:id="Copy" alignment="CENTER" mnemonicParsing="false" onAction="#copyToClipboard" text="3.Copy!" />
+              </items>
+               <effect>
+                  <Glow level="0.0">
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </Glow>
+               </effect>
+            </ToolBar>
+            <Label alignment="CENTER" layoutY="255.0" prefHeight="58.0" prefWidth="244.0" text="The Kleyzmeron!" textAlignment="JUSTIFY" textFill="#d00e0e" textOverrun="CLIP">
+               <font>
+                  <Font name="Chalkduster" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
